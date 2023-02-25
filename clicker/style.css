@@ -1,0 +1,29 @@
+body {
+   font-family: "Lato", sans-serif;
+   background-color: #f1f1f1;
+}
+
+* {
+   font-family: "Lato", sans-serif;
+}
+.wrapper {
+   margin: 0 auto;
+   max-width: 500px;
+   padding: 100px 15px;
+}
+.score {
+   color: rgb(54, 54, 54);
+   font-weight: 900;
+   text-align: center;
+   font-size: 52px;
+}
+
+.game__btn {
+   background-color: cornflowerblue;
+   border: none;
+   color: #fff;
+   font-weight: 700;
+
+   padding: 10px 18px;
+   border-radius: 3px;
+}

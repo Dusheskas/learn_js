@@ -1,6 +1,6 @@
 "use strict";
 
-// Объекты !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//* Объекты !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // const obj = new Object();
 const options = {
@@ -20,7 +20,7 @@ delete options.name; // Удалить пару ключ-значение
 
 options.lol = "cringe"; // Добавил такую пару
 
-// Чтобы перебирать объекты
+//? Чтобы перебирать объекты
 
 for (const key in options) {
    if (typeof options[key] === "object") {
@@ -34,7 +34,7 @@ for (const key in options) {
    console.log(`Свойство ${key} со значением ${options[key]}`);
 }
 
-// Считаем количество свойств в объекте
+//? Считаем количество свойств в объекте
 
 let counter;
 for (const key in options) {
@@ -44,7 +44,7 @@ for (const key in options) {
 
 options.makeTest(); // Проверка своего метода
 
-// Деструктуризация объектов !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// * Деструктуризация объектов !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // const obj = new Object();
 const options = {
@@ -63,13 +63,13 @@ const options = {
 const { boder, bg } = options.colors;
 console.log(boder);
 
-// Массивы и псевдомассивы !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// * Массивы и псевдомассивы !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 const arr = [1, 6, 2, 8, 4];
 arr.pop(); // Удаляет последний элемент
 arr.push(10); // Добавляет последний элемент
 
-// !!! Перебор массива !!!
+// * Перебор массива !!!
 
 for (let i = 0; i < arr.length; i++) {
    console.log(arr[i]);
@@ -88,7 +88,7 @@ arr.forEach(function (item, index, arr) {
 
 arr.map(); // Проходится по массиву и модифицирует его
 
-// !!! Из строки делаем массив !!!
+// * Из строки делаем массив !!!
 const str = "coca-cola, pepsi, fanta, sprite";
 const products = str.split(", ");
 console.log(products);
@@ -105,7 +105,7 @@ function compareNum(a, b) {
    return a - b;
 }
 
-// !!!!!!!!! Псевдомассивы !!!!!!!!!!!!!!!!!!
+// * Псевдомассивы !!!!!!!!!!!!!!!!!!
 // Выглядят также но не имеют методов которые имеют обычные массивы
 
 // Передача по значению и по ссылке
@@ -163,13 +163,15 @@ newNumbers.a = 200;
 console.log(objCopy(numbers));
 console.log(objCopy(newNumbers));
 
-// Копирование массива
+// ? Копирование массива
+
 const oldArray = ["a", "b", "c"];
 // Два способа
 const newArray = oldArray.slice();
 newArray = [...oldArray];
 
-// Spread operator
+// ? Spread operator
+
 const video = ["youtube", "vimeo", "rutube"],
    blogs = ["wordpress", "livejournal", "bloger"],
    internet = [...video, ...blogs, "facebook", "instagram"]; // Он нужен чтобы не делать внутри вложенные массивы, а просто положить туда эти данные

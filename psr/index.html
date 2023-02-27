@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Clicker</title>
+		<title>Камень ножни бумака</title>
 
 		<link rel="stylesheet" href="./style.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,13 +16,23 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<h1>My clicker</h1>
-			<p class="level">+1</p>
-			<h2 class="score">0</h2>
-			<ul class="btns__list">
-				<button class="score_up game__btn">Click!</button>
-				<button class="upgrade game__btn">Upgrade</button>
-			</ul>
+			<h3>Выберите ответ:</h3>
+			<div class="controls">
+				<button class="game_btn" id="rock">Камень</button>
+				<button class="game_btn" id="scissors">Ножницы</button>
+				<button class="game_btn" id="paper">Бумага</button>
+			</div>
+
+			<div class="results" id="results">
+				<h4>Вы:</h4>
+				<p class="user_answer"></p>
+				<br />
+				<h4>Компьютер:</h4>
+				<p class="pc_answer"></p>
+
+				<h5>победитель</h5>
+				<h2 class="winner"></h2>
+			</div>
 		</div>
 		<script src="./app.js"></script>
 	</body>

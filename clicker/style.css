@@ -1,29 +1,44 @@
 body {
-   font-family: "Lato", sans-serif;
-   background-color: #f1f1f1;
+	font-family: "Lato", sans-serif;
+	background-color: #f1f1f1;
 }
 
 * {
-   font-family: "Lato", sans-serif;
+	font-family: "Lato", sans-serif;
 }
 .wrapper {
-   margin: 0 auto;
-   max-width: 500px;
-   padding: 100px 15px;
+	margin: 0 auto;
+	max-width: 500px;
+	padding: 100px 15px;
+	text-align: center;
 }
 .score {
-   color: rgb(54, 54, 54);
-   font-weight: 900;
-   text-align: center;
-   font-size: 52px;
+	color: rgb(54, 54, 54);
+	font-weight: 900;
+	font-size: 52px;
+}
+
+.btns__list {
+	margin-top: 100px;
+	display: flex;
+	column-gap: 10px;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
 }
 
 .game__btn {
-   background-color: cornflowerblue;
-   border: none;
-   color: #fff;
-   font-weight: 700;
+	background-color: cornflowerblue;
+	border: none;
+	color: #fff;
+	font-weight: 700;
+	width: 100px;
+	padding: 10px 18px;
+	border-radius: 3px;
 
-   padding: 10px 18px;
-   border-radius: 3px;
+	transition: background-color ease-in-out 0.1s;
+}
+
+.game__btn:hover {
+	background-color: rgb(122, 164, 243);
 }

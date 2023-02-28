@@ -11,6 +11,8 @@
 		<link rel="stylesheet" href="css/style.min.css" />
 	</head>
 	<body>
+		<script defer src="js/script.js"></script>
+
 		<header class="header">
 			<div class="header__search">
 				<form action="#">
@@ -97,7 +99,7 @@
 								placeholder="Что уже посмотрено...?"
 							/>
 							<span>Сделать его любимым?</span>
-							<input type="checkbox" />
+							<input id="isFavorite" type="checkbox" />
 							<span class="yes">Да!</span>
 							<button id="addMovie">Подтвердить</button>
 						</form>
@@ -111,7 +113,5 @@
 				<img src="img/content_3.png" alt="some picture" />
 			</div>
 		</main>
-
-		<script src="js/script.js"></script>
 	</body>
 </html>

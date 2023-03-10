@@ -1,27 +1,38 @@
-/* 
-Дан массив целых чисел, найдите то, которое встречается нечетное количество раз.
+/*
+Пит любит печь торты. У него есть рецепты и ингредиенты. К сожалению, он не силен в математике. Поможешь ему узнать, сколько тортов он сможет испечь, учитывая его рецепты?
 
-Всегда будет только одно целое число, которое встречается нечетное количество раз.
+Напишите функциюcakes(), которая принимает рецепт (объект) и доступные ингредиенты (тоже объект) и возвращает максимальное количество тортов, которые Пит может испечь (целое число). Для простоты нет единиц измерения количества (например, 1 фунт муки или 200 г сахара — это просто 1 или 200). Ингредиенты, отсутствующие в объектах, можно считать равными 0.
 */
 
-function findOdd(A) {
-	//happy coding!
-	var result = {};
-	A.forEach((a) => {
-		if (result[a] != undefined) ++result[a];
-		else result[a] = 1;
-	});
+function cakes(recipe, available) {
+	// Элементы в рецепте
+	let bigger = [];
 
-	for (const key in result) {
-		if (Object.hasOwnProperty.call(result, key)) {
-			const element = result[key];
-			if (element % 2 != 0) {
-				return Number(key);
-			}
-		} else {
-			return 0;
+	if (Object.keys(available).every((value) => value == Infinity)) {
+		return Infinity;
+	}
+
+	for (const key in recipe) {
+		// Если нужных ингридиентов нет вообще - сразу возвращать ноль
+		if (!Object.hasOwnProperty.call(available, key)) return 0;
+		else if (available[key] >= recipe[key]) {
+			bigger.push(Math.floor(available[key] / recipe[key]));
 		}
 	}
+
+	return Number(Math.min(...bigger));
 }
 
-console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
+console.log(
+	cakes(
+		{ apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100 },
+		{ sugar: Infinity, flour: Infinity, milk: Infinity }
+	)
+);
+
+// console.log(
+// 	cakes(
+// 		{ apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100 },
+// 		{ flour: 1200, sugar: 1200, eggs: 5, milk: 200 }
+// 	)
+// );
